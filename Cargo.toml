@@ -48,3 +48,8 @@ libc = "0.2"
 log = "0.4"
 num-traits = "0.1.32"
 mozjs_sys = "0.50.1"
+
+[patch.crates-io]
+bindgen = { git = "https://github.com/emilio/rust-bindgen", branch = "per-module-lines" }
+mozjs_sys = { git = "https://github.com/asajeffrey/mozjs", branch = "bindgen-in-build-rs" }
+# mozjs_sys = { path = "../mozjs" }
