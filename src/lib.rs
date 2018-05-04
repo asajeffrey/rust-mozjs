@@ -36,5 +36,7 @@ pub mod panic;
 pub mod typedarray;
 
 pub use consts::*;
-
 pub use mozjs_sys::jsval as jsval;
+
+pub use jsval::JS_ARGV;
+pub use jsval::JS_CALLEE;

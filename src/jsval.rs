@@ -193,13 +193,3 @@ pub fn PrivateValue(o: *const c_void) -> JSVal {
     assert!((ptrBits & 1) == 0);
     BuildJSVal(ValueTag::PRIVATE, ptrBits)
 }
-
-#[inline(always)]
-pub unsafe fn JS_ARGV(_cx: *mut JSContext, vp: *mut JSVal) -> *mut JSVal {
-    vp.offset(2)
-}
-
-#[inline(always)]
-pub unsafe fn JS_CALLEE(_cx: *mut JSContext, vp: *mut JSVal) -> JSVal {
-    *vp
-}
